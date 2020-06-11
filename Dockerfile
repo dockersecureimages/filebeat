@@ -1,12 +1,12 @@
-FROM alpine:3.11.6
+FROM alpine:3.12.0
 LABEL website="Secure Docker Images https://secureimages.dev"
 LABEL description="We secure your business from scratch."
 LABEL maintainer="hireus@secureimages.dev"
 
-ARG FILEBEAT_VERSION=7.7.0
+ARG FILEBEAT_VERSION=7.7.1
 ARG TARBALL_ASC="https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-${FILEBEAT_VERSION}-linux-x86_64.tar.gz.asc"
-### https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.7.0-linux-x86_64.tar.gz.sha512
-ARG TARBALL_SHA="07508ccf6ad9c1cda7713ab3cfc39de50d1ba56cb2347cfe6a0c9575512c37e626b3745f90ace2a1a204101da6d7c9fbe437f7669ad420f65af96f01a28bab9a"
+### https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.7.1-linux-x86_64.tar.gz.sha512
+ARG TARBALL_SHA="bf155ccbf439b65d3a8cb316b048d1fa390eec9d35ef8d86c3da97a7fde4672f239574a89b82cca80e1b2e4a9640f9bf7a22b054c2ce883a38554d7fe8d52087"
 ARG GPG_KEY="46095ACC8548582C1A2699A9D27D666CD88E42B4"
 
 ENV PATH $PATH:/usr/share/filebeat
